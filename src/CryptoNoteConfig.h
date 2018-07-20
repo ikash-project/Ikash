@@ -24,7 +24,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 //TODO Specify total number of available coins
 //TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
 //TODO or you can define number explicitly UINT64_CUINT64_C(858986905600000000)
-const uint64_t MONEY_SUPPLY                                  = ((uint64_t)(-1));
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(858986905600000000);
 const unsigned EMISSION_SPEED_FACTOR                         = 18;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -47,6 +47,10 @@ const size_t   DIFFICULTY_WINDOW                             = EXPECTED_NUMBER_O
 const size_t   DIFFICULTY_CUT                                = 60;  // timestamps to cut after sorting
 const size_t   DIFFICULTY_LAG                                = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
+  
+const uint64_t START_BLOCK_REWARD                            = (UINT64_C(320000) * parameters::COIN);
+const uint64_t MIN_BLOCK_REWARD                              = (UINT64_C(150) * parameters::COIN);
+const uint64_t REWARD_HALVING_INTERVAL = (UINT64_C(11000));
 
 const size_t   MAX_BLOCK_SIZE_INITIAL                        =  20 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
