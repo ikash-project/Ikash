@@ -48,8 +48,8 @@ const size_t   DIFFICULTY_CUT                                = 60;  // timestamp
 const size_t   DIFFICULTY_LAG                                = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
   
-const uint64_t START_BLOCK_REWARD                            = (UINT64_C(429493452) * parameters::COIN);
-const uint64_t MIN_BLOCK_REWARD                              = (UINT64_C(150) * parameters::COIN);
+const uint64_t START_BLOCK_REWARD                            = (UINT64_C(429493452));
+const uint64_t MIN_BLOCK_REWARD                              = (UINT64_C(150));
 const uint64_t REWARD_HALVING_INTERVAL                       = (UINT64_C(11000));
 
 const size_t   MAX_BLOCK_SIZE_INITIAL                        =  20 * 1024;
